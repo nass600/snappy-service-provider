@@ -1,0 +1,29 @@
+{
+    "name": "nass600/snappy-service-provider",
+    "description": "Snappy Service Provider for Silex",
+    "type": "library",
+    "keywords": ["silex", "snappy", "service", "wkhtmltopdf", "wkhtmltoimage"],
+    "homepage": "http://github.com/nass600/snappy-service-provider",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ignacio Velazquez",
+            "email": "ivelazquez85@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "silex/silex": "~1.2",
+        "knplabs/knp-snappy": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Nass600": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    }
+}
