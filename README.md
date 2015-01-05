@@ -5,7 +5,7 @@ Silex Service for `snappy` library integration
 [![Latest Stable Version](https://poser.pugx.org/nass600/snappy-service-provider/v/stable.png)](https://packagist.org/packages/nass600/snappy-service-provider)
 [![Total Downloads](https://poser.pugx.org/nass600/snappy-service-provider/downloads.png)](https://packagist.org/packages/nass600/snappy-service-provider)
 [![License](https://poser.pugx.org/nass600/snappy-service-provider/license.svg)](https://packagist.org/packages/nass600/snappy-service-provider)
-[![Build Status](https://travis-ci.org/nass600/snappy-service-provider.svg?branch=master)](https://travis-ci.org/nass600/snappy-service-provider)
+[![Build Status](https://api.travis-ci.org/nass600/snappy-service-provider.svg?branch=master)](https://travis-ci.org/nass600/snappy-service-provider)
 
 
 ## Installation ##
