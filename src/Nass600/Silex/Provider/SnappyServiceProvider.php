@@ -41,4 +41,3 @@ class SnappyServiceProvider implements ServiceProviderInterface
     {
     }
 }
- 

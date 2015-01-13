@@ -14,7 +14,7 @@
     "require": {
         "php": ">=5.3.3",
         "silex/silex": "~1.2",
-        "knplabs/knp-snappy": "dev-master"
+        "knplabs/knp-snappy": "~0.3"
     },
     "autoload": {
         "psr-0": {
