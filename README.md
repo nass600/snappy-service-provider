@@ -1,6 +1,6 @@
 # Snappy Service Provider #
 
-Silex Service for `snappy` library integration
+Silex Service for `snappy` library integration.
 
 [![Build Status](https://api.travis-ci.org/nass600/snappy-service-provider.svg?branch=master)](https://travis-ci.org/nass600/snappy-service-provider)
 [![Latest Stable Version](https://poser.pugx.org/nass600/snappy-service-provider/v/stable.png)](https://packagist.org/packages/nass600/snappy-service-provider)
@@ -16,7 +16,7 @@ Require the library in your composer.json file:
 ```json
 {
     "require": {
-        "nass600/snappy-service-provider": "1.0.0",
+        "nass600/snappy-service-provider": "1.0.1",
     }
 }
 ```
@@ -24,7 +24,7 @@ Require the library in your composer.json file:
 or execute:
 
 ```bash
-composer require "nass600/snappy-service-provider:1.0.0"
+composer require "nass600/snappy-service-provider:1.0.1"
 ```
 
 ## Parameters ##
