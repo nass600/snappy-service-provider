@@ -2,8 +2,8 @@
 
 namespace Nass600\Silex\Provider;
 
-use Silex\ServiceProviderInterface;
-use Silex\Application;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 use Knp\Snappy\Pdf;
 use Knp\Snappy\Image;
 
@@ -15,29 +15,22 @@ use Knp\Snappy\Image;
 class SnappyServiceProvider implements ServiceProviderInterface
 {
     /**
-     * @param Application $app
+     * @param Container $container
      */
-    public function register(Application $app)
+    public function register(Container $container)
     {
-        $app['snappy.pdf.binary'] = '/usr/local/bin/wkhtmltopdf';
-        $app['snappy.pdf.options'] = array();
+        $container['snappy.pdf.binary'] = '/usr/local/bin/wkhtmltopdf';
+        $container['snappy.pdf.options'] = array();
 
-        $app['snappy.pdf'] = $app->share(function ($app) {
-            return new Pdf($app['snappy.pdf.binary'], $app['snappy.pdf.options']);
-        });
+        $container['snappy.pdf'] = function ($container) {
+            return new Pdf($container['snappy.pdf.binary'], $container['snappy.pdf.options']);
+        };
 
-        $app['snappy.image.binary'] = '/usr/local/bin/wkhtmltoimage';
-        $app['snappy.image.options'] = array();
+        $container['snappy.image.binary'] = '/usr/local/bin/wkhtmltoimage';
+        $container['snappy.image.options'] = array();
 
-        $app['snappy.image'] = $app->share(function ($app) {
-            return new Image($app['snappy.image.binary'], $app['snappy.image.options']);
-        });
-    }
-
-    /**
-     * @param Application $app
-     */
-    public function boot(Application $app)
-    {
+        $container['snappy.image'] = function ($container) {
+            return new Image($container['snappy.image.binary'], $container['snappy.image.options']);
+        };
     }
 }
